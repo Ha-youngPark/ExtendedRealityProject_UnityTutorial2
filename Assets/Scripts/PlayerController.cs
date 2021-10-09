@@ -146,8 +146,8 @@ public class PlayerController : MonoBehaviour
         Vector3 _characterRotationY = new Vector3(0f, _yRotation, 0f) * lookSensitivity;
         myRigid.MoveRotation(myRigid.rotation * Quaternion.Euler(_characterRotationY));
 
-        Debug.Log(myRigid.rotation);
-        Debug.Log(myRigid.rotation.eulerAngles);
+        // Debug.Log(myRigid.rotation);
+        // Debug.Log(myRigid.rotation.eulerAngles);
     }
 
 
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     private void IsGround(){
         isGround = Physics.Raycast(transform.position, Vector3.down, capsuleCollider.bounds.extents.y + 0.1f);
     }
-
+ 
     // 점프 시도
     private void TryJump(){
         if(Input.GetKeyDown(KeyCode.Space) && isGround){

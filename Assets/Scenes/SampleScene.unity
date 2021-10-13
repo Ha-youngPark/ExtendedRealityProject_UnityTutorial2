@@ -894,10 +894,10 @@ MonoBehaviour:
   fireRate: 0.2
   reloadTime: 2
   damage: 30
-  reloadBulletCount: 0
-  currentBulletCount: 0
+  reloadBulletCount: 10
+  currentBulletCount: 10
   maxBulletCount: 0
-  carryBulletCount: 0
+  carryBulletCount: 23
   retroActionForce: 0
   retroActionFineSightForce: 0
   fineSightOriginPos: {x: 0, y: 0, z: 0}
@@ -914,7 +914,7 @@ Animator:
   m_GameObject: {fileID: 919132149011438467}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d10821ce31c225489c4dc65d42b5a1a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

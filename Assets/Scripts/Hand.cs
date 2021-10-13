@@ -14,5 +14,4 @@ public class Hand : MonoBehaviour
 
     public Animator anim; //애니메이션.
 
-
 }

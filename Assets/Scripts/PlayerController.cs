@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private Camera theCamera;
     
     private Rigidbody myRigid;
+    private GunController theGunController;
 
     
 
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         myRigid = GetComponent<Rigidbody>();
         applySpeed = walkSpeed;
+        theGunController = FindObjectOfType<GunController>();
 
         //초기화
         originPosY = theCamera.transform.localPosition.y;
@@ -189,6 +191,9 @@ public class PlayerController : MonoBehaviour
         if(isCrouch){
             Crouch();
         }
+
+        theGunController.CancleFineSight();
+
         isRun = true;
         applySpeed = runSpeed;
 

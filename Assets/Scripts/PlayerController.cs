@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour
     // 지면 체크
     private void IsGround(){
         isGround = Physics.Raycast(transform.position, Vector3.down, capsuleCollider.bounds.extents.y + 0.1f);
-        theCrosshair.RunningAnimation(!isGround);
+        theCrosshair.JumpAnimation(!isGround);
     }
  
     // 점프 시도

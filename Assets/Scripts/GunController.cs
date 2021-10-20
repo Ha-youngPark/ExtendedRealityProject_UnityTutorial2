@@ -18,7 +18,7 @@ public class GunController : MonoBehaviour
     //상태 변수들 
    private bool isReload = false;
    [HideInInspector]
-   private bool isFineSightMode = false;
+   public bool isFineSightMode = false;
     
     //본래 포지션 값 
    private Vector3 originPos;
@@ -33,6 +33,7 @@ public class GunController : MonoBehaviour
    [SerializeField]
    private Camera theCam; 
    private Crosshair theCrosshair;  
+
 
     //피격 이펙트 
    [SerializeField]
@@ -68,7 +69,7 @@ public class GunController : MonoBehaviour
 
     //발사 시도
     private void TryFire(){
-        if(Input.GetButton("Fire1") && currentFireRate <= 0 && !isReload){
+        if(Input.GetButton("Fire1") && currentFireRate <= 0 && !isReload ){
              Fire();
         }
     }

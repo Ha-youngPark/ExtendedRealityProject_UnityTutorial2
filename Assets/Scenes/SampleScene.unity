@@ -987,6 +987,7 @@ GameObject:
   - component: {fileID: 799568012}
   - component: {fileID: 799568013}
   - component: {fileID: 799568014}
+  - component: {fileID: 799568015}
   m_Layer: 2
   m_Name: Holder
   m_TagString: Untagged
@@ -1036,6 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGun: {fileID: 1065019093}
+  isFineSightMode: 0
   theCam: {fileID: 963194227}
   hit_effect_prefab: {fileID: 3764930003084541164, guid: 4304ddd2993ad104283a5df6e9f2014a, type: 3}
 --- !u!82 &799568013
@@ -1155,6 +1157,22 @@ MonoBehaviour:
   - {fileID: 919132149009160832}
   theGunController: {fileID: 799568012}
   theHandController: {fileID: 799568011}
+--- !u!114 &799568015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799568009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389f9f2313c5450498565df0f9db4158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitPos: {x: 0.18, y: 0.1, z: 0}
+  fineSightLimitPos: {x: 0.005, y: 0.005, z: 0}
+  smoothSway: {x: 0.05, y: 0.03, z: 0}
+  theGunController: {fileID: 799568012}
 --- !u!1 &817024041
 GameObject:
   m_ObjectHideFlags: 0

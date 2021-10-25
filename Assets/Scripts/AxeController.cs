@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandController : CloseWeaponController 
+public class AxeController : CloseWeaponController
 {
+    
     //현재 활성화 여부.
-   public static bool isActivate = false; 
+    public static bool isActivate = false; 
 
     // Update is called once per frame
     void Update()
@@ -22,12 +23,12 @@ public class HandController : CloseWeaponController
             }
             yield return null;
         }
-   }
+    }
 
-   public override void CloseWeaponChange(CloseWeapon _closeWeapon)
+    public override void CloseWeaponChange(CloseWeapon _closeWeapon)
     {
         base.CloseWeaponChange(_closeWeapon);
         isActivate = true;
     }
-}
 
+}

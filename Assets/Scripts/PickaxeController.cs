@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandController : CloseWeaponController 
+public class PickaxeController : CloseWeaponController
 {
     //현재 활성화 여부.
-   public static bool isActivate = false; 
+    public static bool isActivate = true; 
+
+
+    private void Start() {
+        WeaponManager.currentWeapon = currentCloseWeapon.GetComponent<Transform>();
+        WeaponManager.currentWeaponAnim = currentCloseWeapon.anim;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -22,12 +29,11 @@ public class HandController : CloseWeaponController
             }
             yield return null;
         }
-   }
+    }
 
-   public override void CloseWeaponChange(CloseWeapon _closeWeapon)
+    public override void CloseWeaponChange(CloseWeapon _closeWeapon)
     {
         base.CloseWeaponChange(_closeWeapon);
         isActivate = true;
     }
 }
-
